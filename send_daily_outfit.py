@@ -9,10 +9,11 @@ import sys
 # プロジェクトルートにパスを通す
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from data_manager import load_settings, get_items_by_category
+from data_manager import load_settings, get_items_by_category, load_history, save_history
 from weather import get_today_weather, weather_emoji
 from planner import generate_daily_outfit
 from ntfy_client import send_ntfy_sh
+from datetime import datetime, timedelta
 
 def get_color_emoji(hex_color: str) -> str:
     """HEXカラーに近い色の絵文字（■系のバリエーション）を返す。"""
@@ -62,7 +63,35 @@ def main():
         print("Not enough clothes registered. Exiting.")
         return
 
-    outfit = generate_daily_outfit(tops, bottoms, shoes, outers, today_weather.get("feels_like", today_weather["temp"]))
+    # 履歴の読み込みと5日以内の使用済みアイテムIDの抽出
+    history = load_history()
+    five_days_ago = (datetime.now() - timedelta(days=5)).isoformat()
+    
+    used_item_ids = set()
+    for entry in history:
+        if entry.get("date") >= five_days_ago:
+            used_item_ids.add(entry.get("top_id"))
+            used_item_ids.add(entry.get("bottom_id"))
+            used_item_ids.add(entry.get("shoe_id"))
+            if entry.get("outer_id"):
+                used_item_ids.add(entry.get("outer_id"))
+
+    outfit = generate_daily_outfit(tops, bottoms, shoes, outers, today_weather.get("feels_like", today_weather["temp"]), used_items=used_item_ids)
+
+    # 履歴への追加
+    new_entry = {
+        "date": datetime.now().isoformat(),
+        "top_id": outfit.get("top_id"),
+        "bottom_id": outfit.get("bottom_id"),
+        "shoe_id": outfit.get("shoe_id"),
+        "outer_id": outfit.get("outer_id")
+    }
+    history.append(new_entry)
+    
+    # 5日分より古い履歴を削除して保存
+    cutoff_date = (datetime.now() - timedelta(days=5)).isoformat()
+    history = [entry for entry in history if entry.get("date") >= cutoff_date]
+    save_history(history)
 
     emoji = weather_emoji(today_weather["weather"])
     temp = today_weather["temp"]
