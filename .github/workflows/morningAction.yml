@@ -10,6 +10,8 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout repository
@@ -36,6 +38,9 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add history.json
-        # 変更がある場合のみコミット
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update wardrobe history" && git push)
+        # history.jsonが存在する場合のみ処理
+        if [ -f history.json ]; then
+          git add history.json
+          # 変更がある場合のみコミット
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update wardrobe history" && git push)
+        fi
