@@ -4,8 +4,10 @@ data_manager.py — 服データの永続化（JSONファイル）
 import json
 import os
 import uuid
+from datetime import datetime
 
 DATA_FILE = os.path.join(os.path.dirname(__file__), "wardrobe_data.json")
+HISTORY_FILE = os.path.join(os.path.dirname(__file__), "history.json")
 
 # ---------------------------------------------------------------------------
 # デフォルトのサンプルデータ
@@ -119,3 +121,20 @@ def save_settings(city: str, api_key: str, ntfy_topic: str = ""):
     data["api_key"] = api_key
     data["ntfy_topic"] = ntfy_topic
     _save(data)
+
+
+def load_history() -> list[dict]:
+    """履歴を読み込む。"""
+    if os.path.exists(HISTORY_FILE):
+        try:
+            with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError):
+            return []
+    return []
+
+
+def save_history(history: list[dict]):
+    """履歴を保存する。"""
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(history, f, ensure_ascii=False, indent=2)
