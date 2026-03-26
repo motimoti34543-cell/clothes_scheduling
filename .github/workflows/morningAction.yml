@@ -2,8 +2,8 @@ name: Send Daily Outfit Notification
 
 on:
   schedule:
-    # 毎日日本時間 6:00 (UTC 21:00 前日) に実行
-    - cron: '0 21 * * *'
+    # 毎日日本時間 5:00 (UTC 20:00 前日) に実行。ラグ含めて6時(JST)くらいに発行される
+    - cron: '0 20 * * *'
   # 手動でも実行できるようにする
   workflow_dispatch:
 
