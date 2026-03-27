@@ -1,19 +1,5 @@
 [
   {
-    "date": "2026-03-21T21:48:52.709335",
-    "top_id": "s4",
-    "bottom_id": "s7",
-    "shoe_id": "s10",
-    "outer_id": "s14"
-  },
-  {
-    "date": "2026-03-22T21:51:40.357900",
-    "top_id": "s4",
-    "bottom_id": "s7",
-    "shoe_id": "s9",
-    "outer_id": "s14"
-  },
-  {
     "date": "2026-03-23T22:00:24.295720",
     "top_id": "s5",
     "bottom_id": "s6",
@@ -39,6 +25,13 @@
     "top_id": "s4",
     "bottom_id": "s7",
     "shoe_id": "s10",
+    "outer_id": "s14"
+  },
+  {
+    "date": "2026-03-27T21:52:16.447712",
+    "top_id": "s4",
+    "bottom_id": "s6",
+    "shoe_id": "s9",
     "outer_id": "s14"
   }
 ]
