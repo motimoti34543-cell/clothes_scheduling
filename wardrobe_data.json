@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "id": "s1",
+      "name": "白Tシャツ",
+      "category": "tops",
+      "color": "#FFFFFF",
+      "color_name": "白",
+      "min_temp": 20,
+      "max_temp": 35
+    },
+    {
+      "id": "s2",
+      "name": "黒Tシャツ",
+      "category": "tops",
+      "color": "#222222",
+      "color_name": "黒",
+      "min_temp": 20,
+      "max_temp": 35
+    },
+    {
+      "id": "s3",
+      "name": "青シャツ",
+      "category": "tops",
+      "color": "#4A90D9",
+      "color_name": "青",
+      "min_temp": 15,
+      "max_temp": 28
+    },
+    {
+      "id": "s4",
+      "name": "ベージュニット",
+      "category": "tops",
+      "color": "#D4B896",
+      "color_name": "ベージュ",
+      "min_temp": 5,
+      "max_temp": 18
+    },
+    {
+      "id": "s5",
+      "name": "グレーパーカー",
+      "category": "tops",
+      "color": "#888888",
+      "color_name": "グレー",
+      "min_temp": 5,
+      "max_temp": 15
+    },
+    {
+      "id": "s6",
+      "name": "黒パンツ",
+      "category": "bottoms",
+      "color": "#1A1A1A",
+      "color_name": "黒",
+      "min_temp": 0,
+      "max_temp": 35
+    },
+    {
+      "id": "s7",
+      "name": "デニム",
+      "category": "bottoms",
+      "color": "#4169E1",
+      "color_name": "ブルー",
+      "min_temp": 5,
+      "max_temp": 30
+    },
+    {
+      "id": "s8",
+      "name": "ベージュチノ",
+      "category": "bottoms",
+      "color": "#C8B899",
+      "color_name": "ベージュ",
+      "min_temp": 10,
+      "max_temp": 30
+    },
+    {
+      "id": "s9",
+      "name": "白スニーカー",
+      "category": "shoes",
+      "color": "#F5F5F5",
+      "color_name": "白",
+      "min_temp": 5,
+      "max_temp": 35
+    },
+    {
+      "id": "s10",
+      "name": "黒ブーツ",
+      "category": "shoes",
+      "color": "#1A1A1A",
+      "color_name": "黒",
+      "min_temp": 0,
+      "max_temp": 20
+    },
+    {
+      "id": "s11",
+      "name": "ブラウンローファー",
+      "category": "shoes",
+      "color": "#8B4513",
+      "color_name": "ブラウン",
+      "min_temp": 10,
+      "max_temp": 30
+    },
+    {
+      "id": "s12",
+      "name": "ネイビージャケット",
+      "category": "outers",
+      "color": "#1B2A47",
+      "color_name": "ネイビー",
+      "min_temp": 10,
+      "max_temp": 22
+    }
+  ],
+  "city": "Fukuoka",
+  "api_key": "6c396862382d5b5f4497b2f9de79d2ca",
+  "ntfy_topic": "clothes_schedule_ak3n5ixf9"
+}
