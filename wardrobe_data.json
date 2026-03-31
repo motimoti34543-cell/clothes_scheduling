@@ -109,7 +109,7 @@
       "max_temp": 22
     }
   ],
-  "city": "Fukuoka",
+  "city": "aaa",
   "api_key": "bbb",
   "ntfy_topic": "ccc"
 }
