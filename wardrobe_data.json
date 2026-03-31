@@ -92,12 +92,12 @@
     },
     {
       "id": "s11",
-      "name": "ブラウンローファー",
+      "name": "白靴",
       "category": "shoes",
-      "color": "#8B4513",
-      "color_name": "ブラウン",
-      "min_temp": 10,
-      "max_temp": 30
+      "color": "#FFFFFF",
+      "color_name": "白",
+      "min_temp": -10,
+      "max_temp": 40
     },
     {
       "id": "s12",
