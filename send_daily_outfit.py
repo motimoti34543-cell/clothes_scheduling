@@ -95,13 +95,25 @@ def main():
 
     emoji = weather_emoji(today_weather["weather"])
     temp = today_weather["temp"]
+    feels_like = today_weather.get("feels_like", temp)
     desc = today_weather["description"]
+
+    # 肌着アドバイスの判定（体感温度ベース）
+    if feels_like <= 10:
+        undershirt_advice = "🧣 肌着: 必須！暖かいインナーを着よう"
+    elif feels_like <= 15:
+        undershirt_advice = "🩳 肌着: 着た方がいいよ"
+    elif feels_like <= 20:
+        undershirt_advice = "🩳 肌着: 薄手でもあると安心"
+    else:
+        undershirt_advice = "☀️ 肌着: なくてもOK"
 
     # 通知テキストの組み立て
     notify_text = (
         f"👗 今日の服献立\n"
         f"━━━━━━━━━━━━━━\n"
-        f"{emoji} {temp}℃ — {desc}\n"
+        f"{emoji} 気温{temp}℃ / 体感{feels_like}℃ — {desc}\n"
+        f"{undershirt_advice}\n"
         f"━━━━━━━━━━━━━━\n"
     )
 
