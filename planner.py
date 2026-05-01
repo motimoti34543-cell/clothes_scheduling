@@ -118,6 +118,10 @@ def generate_daily_outfit(
         if o_pool_unused:
             outer = random.choice(o_pool_unused)
 
+        # トップスとボトムスの同色回避
+        if top.get("color_name") and bottom.get("color_name") and top["color_name"] == bottom["color_name"]:
+            continue
+
         # 色相性チェック (アウターがある場合はアウターの色も含める)
         colors_to_check = [top["color"], bottom["color"], shoe["color"]]
         if outer:
