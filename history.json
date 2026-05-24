@@ -1,12 +1,5 @@
 [
   {
-    "date": "2026-05-18T21:07:25.278672",
-    "top_id": "s11",
-    "bottom_id": "s27",
-    "shoe_id": "s1",
-    "outer_id": "s8"
-  },
-  {
     "date": "2026-05-19T21:15:54.757693",
     "top_id": "s45",
     "bottom_id": "s23",
@@ -40,5 +33,12 @@
     "bottom_id": "s60",
     "shoe_id": "s1",
     "outer_id": "s7"
+  },
+  {
+    "date": "2026-05-24T20:50:45.039923",
+    "top_id": "s43",
+    "bottom_id": "s53",
+    "shoe_id": "s1",
+    "outer_id": null
   }
 ]
