@@ -33,5 +33,12 @@
     "bottom_id": "s60",
     "shoe_id": "s1",
     "outer_id": "s6"
+  },
+  {
+    "date": "2026-06-30T21:24:35.629393",
+    "top_id": "s54",
+    "bottom_id": "s23",
+    "shoe_id": "s1",
+    "outer_id": null
   }
 ]
