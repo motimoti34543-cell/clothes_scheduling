@@ -63,7 +63,7 @@
   {"id":"s61","name":"NAVY黒ポロ半袖T","category":"tops","color":"#000000","color_name":"ブラック","min_temp":20,"max_temp":35},
   {"id":"s62","name":"NAVY胸ポケ黒半袖T","category":"tops","color":"#000000","color_name":"ブラック","min_temp":20,"max_temp":35},
   {"id":"s63","name":"グリーン柄シャツ","category":"outers","color":"#17986B","color_name":"ライトグリーン","min_temp":20,"max_temp":35},
-  {"id":"s64","name":"タイ象柄シャツ","category":"outers","color":"#1B2A47","color_name":"ネイビー","min_temp":20,"max_temp":35},
+  {"id":"s64","name":"タイ象柄シャツ","category":"outers","color":"#1B2A47","color_name":"ネイビー","min_temp":20,"max_temp":35}
   ],
   "city": "aaa",
   "api_key": "bbb",
